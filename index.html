@@ -2,16 +2,118 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.min.css">
         <title>Shortly URL shortening API Challenge</title>
     </head>
     <body>
+        <nav>
+            <div class="container">
+                <ul class="left_nav">
+                    <li><a href="#"><img src="./images/logo.svg" alt="logo of shortly"></a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+                <ul class="right_nav">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#" class="btn_rounded">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
 
-        
+        <section id="hero">
+            <div class="container">
+                <div class="description">
+                    <h1>More than just shorter links</h1>
+                    <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+                    <a class="btn_rounded" href="#">Get Started</a>
+                </div>
+                <div class="illustration_container">
+                    <img src="./images/illustration-working.svg" alt="man working on a computer">
+                </div>
+            </div>
+        </section>
 
+        <section id="shorten_form">
+            <div class="container">
+                <form>
+                    <input 
+                        type="text" 
+                        name="url" 
+                        id="url"
+                        placeholder="Shorten a link here..."
+                    >
+                    <button type="submit" class="btn_semi_rounded">Shorten It!</button>
+                </form>
+            </div>
+        </section>
 
+        <section id="statistics">
+            <div class="container">
+                <div class="details">
+                    <h2>Advanced Statistics</h2>
+                    <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+                </div>
+                <div class="stats_container">
+                    <div class="stats">
+                        <div class="icon_brand"></div>
+                        <h3>Brand Recognition</h3>
+                        <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="icon_records"></div>
+                        <h3>Detailed Records</h3>
+                        <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="icon_customizable"></div>
+                        <h3>Fully Customizable</h3>
+                        <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="boost">
+            <div class="container">
+                <h4>Boost your links today</h4>
+                <a href="#" class="btn_rounded">Get Started</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <img src="./images/logo-dark.svg" alt="logo of shortening api">
+                <ul class="features_list">
+                    <li><p>Features</p></li>
+                    <li><a href="#">Link Shortening</a></li>
+                    <li><a href="#">Branded Links</a></li>
+                    <li><a href="#">Analytics</a></li>
+                </ul>
+                <ul class="resources_list">
+                    <li><p>Resources</p></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <ul class="company_list">
+                    <li><p>Company</p></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="social_list">
+                    <li><a href="#"><span class="icon_facebook"></span></a></li>
+                    <li><a href="#"><span class="icon_twitter"></span></a></li>
+                    <li><a href="#"><span class="icon_pinterest"></span></a></li>
+                    <li><a href="#"><span class="icon_instagram"></span></a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
 
 /* Font */
-$font_primary: "Jost", sans-serif;
+$font_primary: "Poppins", sans-serif;
 
 /*  */
-$color_peach: #E7816B;
-$color_light_peach: #FFAD9B;
-$color_black: #1D1C1E;
-$color_dark_grey: #333136;
+
+$color_cyan: #2BD0D0;
+$color_grey: #9E9AA8;
+$color_light_grey: #EFF1F7;
+$color_purple: #4B3F6B;
+$color_dark_purple: #3A3054;
+$color_black: #34313D;
 $color_white: #FFFFFF;
-$color_light_grey: #F1F3F5;
 
 /* Break Points */
-$bp_lg: 1111px;
+$bp_lg: 1108px;
 $bp_md: 1000px;
 $bp_sm: 700px;
