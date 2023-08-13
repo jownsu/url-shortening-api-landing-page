@@ -1,0 +1,119 @@
+#locations_page{
+    .location .container{
+        display: flex;
+        gap: 3rem;
+        height: 32.6rem;
+        margin-bottom: 3.2rem;
+
+        @media only screen and (max-width: $bp_md){
+            flex-direction: column-reverse;
+            height: 68.3rem;
+            margin-bottom: 12rem;
+        }
+
+        @media only screen and (max-width: $bp_sm){
+            gap: 0;
+            height: 71.4rem;
+            margin-bottom: 4rem;
+            width: 100%;
+        }
+
+        .description{
+            align-items: center;
+            background: #FDF3F0 url("../../images/global/bg-pattern-two-circles.svg") no-repeat left bottom;
+            border-radius: 0;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            padding: 0 3rem;
+
+            @media only screen and (max-width: $bp_md){
+                flex: 1;
+            }
+
+            @media only screen and (max-width: $bp_sm){
+                background: #FDF3F0 url("../../images/global/bg-pattern-three-circles.svg") no-repeat left top;
+                justify-content: unset;
+                padding-top: 7.8rem;
+            }
+
+            .country_name{
+                color: $color_peach;
+                font: 500 4rem/4.8rem $font_primary;
+                margin-bottom: 2.3rem;
+                max-width: 54rem;
+                width: 100%;
+
+                @media only screen and (max-width: $bp_sm){
+                    text-align: center;
+                    font: 500 3.2rem/3.6rem $font_primary;
+                }
+            }
+    
+            .info{
+                display: flex;
+                gap: 11rem;
+                max-width: 54rem;
+                width: 100%;
+
+                @media only screen and (max-width: $bp_sm){
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 2.2rem;
+                    text-align: center;
+                }
+                
+                div{
+                    p{
+                        font: 400 1.6rem/2.6rem $font_primary;
+
+                        @media only screen and (max-width: $bp_sm){
+                            font: 400 1.5rem/2.5rem $font_primary;
+                        }
+
+                        &:first-child{
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+            
+        .map{
+            border-radius: 1.5rem;
+            flex: 1;
+            max-width: 35rem;
+
+            @media only screen and (max-width: $bp_md){
+                background: url("../../images/locations/image-map-canada-tablet.png") no-repeat center / cover;
+                max-width: unset;
+            }
+
+            @media only screen and (max-width: $bp_sm){
+                border-radius: 0;
+                flex: unset;
+                height: 32rem;
+            }
+        }
+    }
+
+    .location:nth-child(odd) .container{
+        flex-direction: row-reverse;
+
+        @media only screen and (max-width: $bp_md){
+            flex-direction: column-reverse;
+        }
+    }
+    
+    footer{
+        margin-top: 38rem;
+        @media only screen and (max-width: $bp_md){
+            margin-top: 38.5rem;
+        }
+        @media only screen and (max-width: $bp_sm){
+            margin-top: 31rem;
+        }
+    }
+}
