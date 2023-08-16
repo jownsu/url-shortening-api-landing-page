@@ -43,11 +43,12 @@ body{
 .btn_rounded,
 .btn_semi_rounded{
     background: $color_cyan;
-    padding: .7rem 2.4rem;
-    color: $color_white !important;
     border: none;
-    outline: none;
+    color: $color_white !important;
+    cursor: pointer;
     font: 700 2rem $font_primary;
+    outline: none;
+    padding: .7rem 2.4rem;
 }
 
 .btn_rounded{
@@ -66,12 +67,16 @@ nav .container{
     font: 700 1.5rem $font_primary;
     height: 10rem;
     justify-content: space-between;
+    margin-top: 2.5rem;
 
     .left_nav{
         align-items: center;
         display: flex;
         gap: 3rem;
         li{
+            &:first-child{
+                margin-right: 1.5rem;
+            }
             a{
                 color: $color_grey;
             }
@@ -94,10 +99,12 @@ nav .container{
 /* HERO SECTION */
 
 #hero .container{
-
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 10rem;
+    margin-top: 2.7rem;
+    padding-bottom: 15.5rem;
+    position: relative;
 
     .description{
 
@@ -106,12 +113,13 @@ nav .container{
             font: 700 8rem/9rem $font_primary;
             letter-spacing: -.2rem;
             color: $color_black;
+            margin-bottom: .5rem;
         }
 
         p{
             color: $color_grey;
             font: 500 2.2rem/3.6rem $font_primary;
-            margin-bottom: 4rem;
+            margin-bottom: 3.7rem;
         }
 
         a{
@@ -128,28 +136,20 @@ nav .container{
             object-fit: contain;
         }
     }
-}
-
-/* END HERO SECTION */
-
-/* SHORTEN FORM */
-
-#shorten_form .container{
-    align-items: center;
-    background: $color_dark_purple url("../images/bg-shorten-desktop.svg");
-    border-radius: 1rem;
-    display: flex;
-    height: 16.8rem;
-    transform: translateY(50%);
-
 
     form{
+        align-items: center;
+        background: $color_dark_purple url("../images/bg-shorten-desktop.svg");
+        border-radius: 1rem;
+        bottom: -8.2rem;
         display: flex;
         flex: 1;
         gap: 2.4rem;
-        height: 6.4rem;
+        height: 16.8rem;
         justify-content: center;
         padding: 0 6.5rem;
+        position: absolute;
+        width: 100%;
 
         input{
             border-radius: 1rem;
@@ -157,6 +157,7 @@ nav .container{
             color: $color_grey;
             flex: 1;
             font: 500 2rem/3.6rem $font_primary;
+            height: 6.4rem;
             outline: none;
             padding: 0 3.2rem;
 
@@ -164,21 +165,26 @@ nav .container{
                 opacity: .5;
             }
         }
+
+        button[type="submit"]{
+            height: 6.4rem;
+        }
     }
 }
 
-/* END OF SHORTEN FORM */
+/* END HERO SECTION */
 
 /* STATISTICS SECTION */
 #statistics{
     background: $color_light_grey;
     .container{
-        padding: 15rem 0;
+        padding: 20rem 0 20.8rem;
         .details{
             text-align: center;
             h2{
                 font: 700 4rem/4.8rem $font_primary;
-                letter-spacing: -.1rem
+                letter-spacing: -.1rem;
+                margin-bottom: 1.8rem;
             }
             p{
                 color: $color_grey;
@@ -191,29 +197,31 @@ nav .container{
 
         .stats_container{
             display: flex;            
+            gap: 3rem;
             justify-content: space-between;
-            margin-top: 10rem;
+            margin-top: 10.5rem;
             position: relative;
             &::before{
                 background: $color_cyan;
                 content: "";
                 height: .8rem;
                 position: absolute;
-                top: 50%;
+                top: 15.5rem;
                 width: 100%;
             }
             .stats{
                 background: $color_white;
                 border-radius: .5rem;
+                height: 26.7rem;
                 max-width: 35rem;
                 padding: 7rem 3.2rem 3.2rem;
                 position: relative;
 
                 &:nth-child(2){
-                    transform: translateY(2.4rem);
+                    transform: translateY(4.4rem);
                 }
                 &:nth-child(3){
-                    transform: translateY(4.8rem);
+                    transform: translateY(8.8rem);
                 }
 
                 div{
@@ -260,7 +268,7 @@ nav .container{
 /* BOOST SECTION */
 
 #boost{
-    background: $color_dark_purple url("../images/bg-boost-desktop.svg") no-repeat;
+    background: $color_dark_purple url("../images/bg-boost-desktop.svg") no-repeat center / cover;
     .container{
         align-items: center;
         display: flex;
@@ -283,11 +291,11 @@ nav .container{
 /* FOOTER */
 footer{
     background: #232127;
-    padding: 7rem 0;
+    padding: 7.3rem 0;
     .container{
         color: $color_white;
         display: flex;
-        gap: 7.5rem;
+        gap: 8rem;
         justify-content: space-between;
 
         img{
