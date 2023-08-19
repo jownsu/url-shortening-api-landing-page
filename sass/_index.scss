@@ -49,6 +49,10 @@ body{
     font: 700 2rem $font_primary;
     outline: none;
     padding: .7rem 2.4rem;
+
+    &:hover{
+        background: $color_cyan_light;
+    }
 }
 
 .btn_rounded{
@@ -79,6 +83,10 @@ nav .container{
             }
             a{
                 color: $color_grey;
+
+                &:hover{
+                    color: $color_black;
+                }
             }
         }
     }
@@ -87,9 +95,18 @@ nav .container{
         align-items: center;
         display: flex;
         gap: 3.5rem;
+
         li{
             a{
                 color: $color_grey;
+
+                &:hover{
+                    color: $color_black;
+                }
+
+                &.btn_rounded{
+                    font: 700 1.5rem $font_primary;
+                }
             }
         }
     }
@@ -151,25 +168,52 @@ nav .container{
         position: absolute;
         width: 100%;
 
-        input{
-            border-radius: 1rem;
-            border: none;
-            color: $color_grey;
+        .input_group{
             flex: 1;
-            font: 500 2rem/3.6rem $font_primary;
-            height: 6.4rem;
-            outline: none;
-            padding: 0 3.2rem;
+            position: relative;
 
-            &::placeholder{
-                opacity: .5;
+            input{
+                border-radius: 1rem;
+                border: none;
+                color: $color_grey;
+                font: 500 2rem/3.6rem $font_primary;
+                height: 6.4rem;
+                outline: none;
+                padding: 0 3.2rem;
+                width: 100%;
+    
+                &::placeholder{
+                    opacity: .5;
+                }
             }
+        }
+
+
+
+        &.error{
+            .input_group{
+                input{
+                    border: 3px solid $color_red;
+                }   
+
+                .error_message{
+                    bottom: -3.4rem;
+                    color: $color_red;
+                    font: italic 500 1.6rem $font_primary;
+                    left: 0;
+                    position: absolute;
+                }
+            }
+     
         }
 
         button[type="submit"]{
             height: 6.4rem;
+            width: 18.8rem;
         }
     }
+
+
 }
 
 /* END HERO SECTION */
@@ -178,7 +222,67 @@ nav .container{
 #statistics{
     background: $color_light_grey;
     .container{
-        padding: 20rem 0 20.8rem;
+        padding: 8rem 0 20.8rem;
+
+        #links_list{
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            margin: 2.6rem 0 11.8rem 0;
+            width: 100%;
+    
+            li{
+                align-items: center;
+                background: $color_white;
+                display: flex;
+                height: 7.2rem;
+                padding: 0 2.4rem;
+
+                p{
+                    font: 500 2rem/3.6rem $font_primary;
+                    letter-spacing: .015rem;
+                    margin-right: auto;
+                }
+
+                a{
+                    color: $color_cyan;
+                    font: 500 2rem/3.6rem $font_primary;
+                    letter-spacing: .015rem;
+                    margin-right: 2.3rem;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                button{
+                    border-radius: .5rem;
+                    border: none;
+                    color: $color_white;
+                    cursor: pointer;
+                    font: 700 1.5rem $font_primary;
+                    height: 4rem;
+                    outline: none;
+                    width: 10.3rem;
+    
+                    &.copy_btn{
+                        background: $color_cyan;
+
+                        &:hover{
+                            background: $color_cyan_light;
+                        }
+                    }
+                    &.copied_btn{
+                        background: $color_purple;
+
+                        &:hover{
+                            background: $color_dark_purple;
+                        }
+                    }
+    
+                } 
+            }
+        }
+
         .details{
             text-align: center;
             h2{
@@ -201,6 +305,7 @@ nav .container{
             justify-content: space-between;
             margin-top: 10.5rem;
             position: relative;
+
             &::before{
                 background: $color_cyan;
                 content: "";
@@ -316,6 +421,10 @@ footer{
                     color: #BFBFBF;
                     font: 500 1.5rem $font_primary;
                     letter-spacing: -.00234rem;
+
+                    &:hover{
+                        color: $color_cyan;
+                    }
                 }
             }
         }
@@ -330,15 +439,27 @@ footer{
             }
             .icon_facebook{
                 background: url("../images/icon-facebook.svg") no-repeat center / contain;
+                &:hover{
+                    background-image: url("../images/icon-facebook-active.svg");
+                }
             }
             .icon_twitter{
                 background: url("../images/icon-twitter.svg") no-repeat center / contain;
+                &:hover{
+                    background-image: url("../images/icon-twitter-active.svg");
+                }
             }
             .icon_pinterest{
                 background: url("../images/icon-pinterest.svg") no-repeat center / contain;
+                &:hover{
+                    background-image: url("../images/icon-pinterest-active.svg");
+                }
             }
             .icon_instagram{
                 background: url("../images/icon-instagram.svg") no-repeat center / contain;
+                &:hover{
+                    background-image: url("../images/icon-instagram-active.svg");
+                }
             }
         }
     }

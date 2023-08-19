@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.min.css">
+        <script src="./js/index.js"></script>
         <title>Shortly URL shortening API Challenge</title>
     </head>
     <body>
@@ -35,13 +36,16 @@
                 <div class="illustration_container">
                     <img src="./images/illustration-working.svg" alt="man working on a computer">
                 </div>
-                <form>
-                    <input 
-                        type="text" 
-                        name="url" 
-                        id="url"
-                        placeholder="Shorten a link here..."
-                    >
+                <form id="shorten_form" class="error">
+                    <div class="input_group">
+                        <input 
+                            type="text" 
+                            name="url" 
+                            id="url"
+                            placeholder="Shorten a link here..."
+                        >
+                        <p class="error_message">Please add a link</p>
+                    </div>
                     <button type="submit" class="btn_semi_rounded">Shorten It!</button>
                 </form>
             </div>
@@ -49,6 +53,18 @@
 
         <section id="statistics">
             <div class="container">
+                <ul id="links_list">
+                    <li>
+                        <p>https://www.frontendmentor.io</p>
+                        <a href="https://rel.ink/k4lKyk">https://rel.ink/k4lKyk</a>
+                        <button type="button" class="copy_btn">Copy</button>
+                    </li>
+                    <li>
+                        <p>https://twitter.com/frontendmentor</p>
+                        <a href="https://rel.ink/gxOXp9">https://rel.ink/gxOXp9</a>
+                        <button type="button" class="copied_btn">Copied!</button>
+                    </li>
+                </ul>
                 <div class="details">
                     <h2>Advanced Statistics</h2>
                     <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
