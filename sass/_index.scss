@@ -70,17 +70,27 @@ nav .container{
     display: flex;
     font: 700 1.5rem $font_primary;
     height: 10rem;
-    justify-content: space-between;
     margin-top: 2.5rem;
+    align-items: center;
+
+    @media only screen and (max-width: $bp_md){
+        height: 6.9rem;
+    }
+
+    .shortly_icon{
+        margin-right: 4.4rem;
+    }
 
     .left_nav{
         align-items: center;
         display: flex;
         gap: 3rem;
+        margin-right: auto;
+
+        @media only screen and (max-width: $bp_md){
+            display: none;
+        }
         li{
-            &:first-child{
-                margin-right: 1.5rem;
-            }
             a{
                 color: $color_grey;
 
@@ -96,6 +106,10 @@ nav .container{
         display: flex;
         gap: 3.5rem;
 
+        @media only screen and (max-width: $bp_md){
+            display: none;
+        }
+
         li{
             a{
                 color: $color_grey;
@@ -110,6 +124,28 @@ nav .container{
             }
         }
     }
+
+    .menu_btn{
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+        height: 2.5rem;
+        margin-left: auto;
+        outline: none;
+        width: 2.5rem;
+
+        .menu_icon{
+            background: url("../images/icon-menu.svg") no-repeat center / contain;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: $bp_md){
+            display: block;
+        }
+    }
 }
 /* END NAV */
 
@@ -120,23 +156,45 @@ nav .container{
     display: flex;
     gap: 10rem;
     margin-top: 2.7rem;
-    padding-bottom: 15.5rem;
+    padding: 7.3rem 0 22.5rem 0;
     position: relative;
 
-    .description{
+    @media only screen and (max-width: $bp_md){
+        flex-direction: column-reverse;
+        gap: 3.2rem;
+        justify-content: center;
+        margin-top: 0;
+        padding: .1rem 0 18rem 0;
+    }
 
-        min-width: 56.5rem;
+    .description{
+        flex: 1;
+        max-width: 56.5rem;
+        
+        @media only screen and (max-width: $bp_md){
+            text-align: center;
+        }
+
         h1{
             font: 700 8rem/9rem $font_primary;
             letter-spacing: -.2rem;
             color: $color_black;
             margin-bottom: .5rem;
+            @media only screen and (max-width: $bp_md){
+                font: 700 4.2rem/4.8rem $font_primary;
+                margin-bottom: 1.2rem;
+            }
         }
 
         p{
             color: $color_grey;
             font: 500 2.2rem/3.6rem $font_primary;
             margin-bottom: 3.7rem;
+
+            @media only screen and (max-width: $bp_md){
+                font: 500 1.8rem/3rem $font_primary;
+                margin-bottom: 3.1rem;
+            }
         }
 
         a{
@@ -146,7 +204,15 @@ nav .container{
     }
 
     .illustration_container{
-        min-width: 73.3rem;
+        position: absolute;
+        right: -29rem;
+        
+        @media only screen and (max-width: $bp_md){
+            margin: 0 auto;
+            position: initial;
+            width: 150%;
+        }
+        
         img{
             height: 100%;
             width: 100%;
@@ -156,7 +222,7 @@ nav .container{
 
     form{
         align-items: center;
-        background: $color_dark_purple url("../images/bg-shorten-desktop.svg");
+        background: $color_dark_purple url("../images/bg-shorten-desktop.svg") no-repeat center / cover;
         border-radius: 1rem;
         bottom: -8.2rem;
         display: flex;
@@ -168,10 +234,21 @@ nav .container{
         position: absolute;
         width: 100%;
 
+        @media only screen and (max-width: $bp_md){
+            background: $color_dark_purple url("../images/bg-shorten-mobile.svg") no-repeat;
+            background-size: cover;
+            background-position: 8rem -5.5rem;
+            flex-direction: column;
+            height: 18.2rem;
+            padding: 2.4rem;
+        }
+
         .input_group{
             flex: 1;
             position: relative;
-
+            @media only screen and (max-width: $bp_md){
+                width: 100%;
+            }
             input{
                 border-radius: 1rem;
                 border: none;
@@ -182,6 +259,11 @@ nav .container{
                 padding: 0 3.2rem;
                 width: 100%;
     
+                @media only screen and (max-width: $bp_md){
+                    font-size: 1.6rem;
+                    height: 4.8rem;
+                    padding: 0 1.4rem;
+                }
                 &::placeholder{
                     opacity: .5;
                 }
@@ -194,6 +276,9 @@ nav .container{
             .input_group{
                 input{
                     border: 3px solid $color_red;
+                    &::placeholder{
+                        color: $color_red;
+                    }
                 }   
 
                 .error_message{
@@ -202,6 +287,11 @@ nav .container{
                     font: italic 500 1.6rem $font_primary;
                     left: 0;
                     position: absolute;
+
+                    @media only screen and (max-width: $bp_md){
+                        bottom: -.8rem;
+                        font-size: 1.2rem;
+                    }
                 }
             }
      
@@ -210,6 +300,11 @@ nav .container{
         button[type="submit"]{
             height: 6.4rem;
             width: 18.8rem;
+
+            @media only screen and (max-width: $bp_md){
+                height: 4.8rem;
+                width: 100%;
+            }
         }
     }
 
@@ -224,12 +319,21 @@ nav .container{
     .container{
         padding: 8rem 0 20.8rem;
 
+        @media only screen and (max-width: $bp_md){
+            padding: 8rem 0 16rem;
+        }
+
         #links_list{
             display: flex;
             flex-direction: column;
             gap: 1.6rem;
             margin: 2.6rem 0 11.8rem 0;
             width: 100%;
+
+            @media only screen and (max-width: $bp_md){
+                margin: 2.4rem 0 7.8rem 0;
+                gap: 2.4rem;
+            }
     
             li{
                 align-items: center;
@@ -238,10 +342,28 @@ nav .container{
                 height: 7.2rem;
                 padding: 0 2.4rem;
 
+                @media only screen and (max-width: $bp_md){
+                    flex-direction: column;
+                    height: 15.5rem;
+                    padding: 0 .1rem;
+                    align-items: unset;
+                }
+
                 p{
                     font: 500 2rem/3.6rem $font_primary;
                     letter-spacing: .015rem;
                     margin-right: auto;
+
+                    @media only screen and (max-width: $bp_md){
+                        font-size: 1.6rem;
+                        border-bottom: 1px solid #E6E5E9;
+                        width: 100%;
+                        padding: .7rem 1.5rem;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        margin-bottom: .5rem;
+                    }
                 }
 
                 a{
@@ -249,9 +371,16 @@ nav .container{
                     font: 500 2rem/3.6rem $font_primary;
                     letter-spacing: .015rem;
                     margin-right: 2.3rem;
+                    padding: 0 1.5rem;
 
                     &:hover{
                         text-decoration: underline;
+                    }
+
+                    @media only screen and (max-width: $bp_md){
+                        font-size: 1.6rem;
+                        margin-right: 0;
+                        margin-bottom: .5rem;
                     }
                 }
                 button{
@@ -263,6 +392,11 @@ nav .container{
                     height: 4rem;
                     outline: none;
                     width: 10.3rem;
+
+                    @media only screen and (max-width: $bp_md){
+                        width: calc(100% - 3rem);
+                        margin: 0 auto;
+                    }
     
                     &.copy_btn{
                         background: $color_cyan;
@@ -289,12 +423,21 @@ nav .container{
                 font: 700 4rem/4.8rem $font_primary;
                 letter-spacing: -.1rem;
                 margin-bottom: 1.8rem;
+
+                @media only screen and (max-width: $bp_md){
+                    font-size: 2.8rem;
+                    margin-bottom: 1rem;
+                }
             }
             p{
                 color: $color_grey;
                 font: 500 1.8rem/3.2rem $font_primary;
                 margin: 0 auto;
                 max-width: 54rem;
+
+                @media only screen and (max-width: $bp_md){
+                    font-size: 1.6rem;
+                }
             }
 
         }
@@ -314,6 +457,21 @@ nav .container{
                 top: 15.5rem;
                 width: 100%;
             }
+
+            @media only screen and (max-width: $bp_md){
+                align-items: center;
+                flex-direction: column;
+                gap: 5.2rem;
+
+                &::before{
+                    height: 100%;
+                    right: 50%;
+                    top: .5rem;
+                    transform: translateX(50%);
+                    width: .8rem;
+                }
+            }
+
             .stats{
                 background: $color_white;
                 border-radius: .5rem;
@@ -329,6 +487,13 @@ nav .container{
                     transform: translateY(8.8rem);
                 }
 
+                @media only screen and (max-width: $bp_md){
+                    padding: 6.4rem 1.5rem 3.2rem;
+                    position: relative;
+                    text-align: center;
+                    transform: unset;
+                }
+
                 div{
                     background: $color_purple;
                     border-radius: 50%;
@@ -339,6 +504,11 @@ nav .container{
                     top: -20%;
                     width: 8.8rem;
 
+                    @media only screen and (max-width: $bp_md){
+                        right: 50%;
+                        transform: translateX(50%);
+                    }
+                    
                     &.icon_brand{
                         background: $color_purple url("../images/icon-brand-recognition.svg") no-repeat center / contain;
                         background-size: 50%;
@@ -357,6 +527,7 @@ nav .container{
 
                 h3{
                     font: 700 2.2rem $font_primary;
+                    margin-bottom: 1.1rem;
                 }   
 
                 p{
@@ -374,6 +545,11 @@ nav .container{
 
 #boost{
     background: $color_dark_purple url("../images/bg-boost-desktop.svg") no-repeat center / cover;
+    
+    @media only screen and (max-width: $bp_md){
+        background-image: url("../images/bg-boost-mobile.svg");
+    }
+    
     .container{
         align-items: center;
         display: flex;
@@ -382,10 +558,22 @@ nav .container{
         height: 25rem;
         justify-content: center;
         text-align: center;
+        @media only screen and (max-width: $bp_md){
+            height: 27.5rem;
+            gap: 1.5rem;
+        }
         h4{
             color: $color_white;
             font: 700 4rem/4.8rem $font_primary;
             letter-spacing: -.1rem;
+            
+            @media only screen and (max-width: $bp_md){
+                font-size: 2.8rem;
+                letter-spacing: -.2rem;
+            }
+        }
+        a{
+            padding: 1rem 3rem;
         }
     }
 
@@ -397,15 +585,31 @@ nav .container{
 footer{
     background: #232127;
     padding: 7.3rem 0;
+
+    @media only screen and (max-width: $bp_md){
+        padding: 5rem 0;
+    }
+
     .container{
         color: $color_white;
         display: flex;
         gap: 8rem;
         justify-content: space-between;
 
+        @media only screen and (max-width: $bp_md){
+            align-items: center;
+            flex-direction: column;
+            gap: 4.4rem;
+            text-align: center;
+        }
+
         img{
             align-self: flex-start;
             margin-right: auto;
+
+            @media only screen and (max-width: $bp_md){
+                margin: 0 auto;
+            }
         }
 
         ul{
