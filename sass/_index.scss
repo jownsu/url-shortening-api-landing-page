@@ -63,6 +63,10 @@ body{
     border-radius: 1rem;
 }
 
+.hide{
+    display: none;
+}
+
 /* RESETS, GLOBALS END */
 
 /* NAV */
@@ -411,6 +415,10 @@ nav .container{
                     font: 500 2rem/3.6rem $font_primary;
                     letter-spacing: .015rem;
                     margin-right: auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 50%;
 
                     @media only screen and (max-width: $bp_md){
                         font-size: 1.6rem;
@@ -429,7 +437,11 @@ nav .container{
                     font: 500 2rem/3.6rem $font_primary;
                     letter-spacing: .015rem;
                     margin-right: 2.3rem;
+                    max-width: 40rem;
+                    overflow: hidden;
                     padding: 0 1.5rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
 
                     &:hover{
                         text-decoration: underline;
@@ -465,10 +477,7 @@ nav .container{
                     }
                     &.copied_btn{
                         background: $color_purple;
-
-                        &:hover{
-                            background: $color_dark_purple;
-                        }
+                        cursor: default;
                     }
     
                 } 
